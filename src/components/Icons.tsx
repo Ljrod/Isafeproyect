@@ -1,6 +1,6 @@
 export const LogoIcon = () => {
   return (
-    <svg
+    /*<svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -19,9 +19,15 @@ export const LogoIcon = () => {
       />
       <path d="M3 9h18" />
       <path d="M9 21V9" />
-    </svg>
+    </svg>*/
+
+    <img 
+      src="../assets/logoIsafe.png" // Ruta de la imagen
+      alt="Logo Isafe" // Texto alternativo para accesibilidad
+      className="lucide lucide-panels-top-left mr-2 w-8 h-8" // Ajusta el tamaño de la imagen según necesites
+    />
   );
-};
+}
 
 export const MedalIcon = () => {
   return (

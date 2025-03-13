@@ -23,14 +23,15 @@ interface RouteProps {
   label: string;
 }
 
+/*Menu Navegacion */
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: "#Inicio",
+    label: "Inicio",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#Sobre Nosotros",
+    label: "Sobre Nosotros",
   },
   {
     href: "#pricing",
@@ -42,6 +43,7 @@ const routeList: RouteProps[] = [
   },
 ];
 
+/*Icono Principal*/
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
@@ -51,11 +53,11 @@ export const Navbar = () => {
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
-              href="/"
+              href="../..assets/Logo Isafe.png"
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              ShadcnUI/React
+              iSafe
             </a>
           </NavigationMenuItem>
 
