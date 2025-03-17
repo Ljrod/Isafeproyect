@@ -1,22 +1,11 @@
 import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import logoIsafe from "@/assets/logoIsafe.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface RouteProps {
   href: string;
@@ -25,22 +14,11 @@ interface RouteProps {
 
 /*Menu Navegacion */
 const routeList: RouteProps[] = [
-  {
-    href: "#Inicio",
-    label: "Inicio",
-  },
-  {
-    href: "#Sobre Nosotros",
-    label: "Sobre Nosotros",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+
+  { href: "#Inicio", label: "Inicio" },
+  { href: "#Sobre Nosotros", label: "Sobre Nosotros" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 /*Icono Principal*/
@@ -51,14 +29,8 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a
-              rel="noreferrer noopener"
-              href="../..assets/Logo Isafe.png"
-              className="ml-2 font-bold text-xl flex"
-            >
-              <LogoIcon />
-              iSafe
-            </a>
+            <img src={logoIsafe} alt="iSafe Logo" className="h-8 w-auto mr-2" />
+            <span className="font-bold text-xl" style={{ fontFamily: "Montserrat, sans-serif" }}>iSafe</span>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -98,14 +70,14 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    href="https://bit.ly/iSafe-Whatsapp"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
                       variant: "secondary",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
+                    <FaWhatsapp className="mr-2 w-5 h-5 text-[#25D366]" />
+                    Whatsapp
                   </a>
                 </nav>
               </SheetContent>
@@ -131,12 +103,12 @@ export const Navbar = () => {
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+              href="https://bit.ly/iSafe-Whatsapp"
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              <FaWhatsapp className="mr-2 w-5 h-5 text-[#25D366]" />
+              Whatsapp
             </a>
 
             <ModeToggle />
